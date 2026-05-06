@@ -1,0 +1,104 @@
+/* ============================================================
+   AnimeX - Estilos Panel Administración
+   ============================================================ */
+
+body { display: flex; flex-direction: column; min-height: 100vh; }
+
+/* ── Layout ──────────────────────────────────── */
+.admin-wrap  { display: flex; flex: 1; min-height: calc(100vh - 0px); }
+.sidebar {
+  width: 240px; flex-shrink: 0; background: var(--bg2);
+  border-right: 1px solid rgba(255,255,255,.06);
+  padding: 28px 16px; display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; overflow-y: auto;
+}
+.sidebar-logo { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--accent); letter-spacing: 3px; margin-bottom: 4px; }
+.sidebar-sub  { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; font-weight: 800; }
+.sidebar-label { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800; padding: 0 12px; margin-bottom: 8px; margin-top: 20px; }
+
+.nav-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: var(--radius-sm);
+  cursor: pointer; transition: all .2s; margin-bottom: 3px;
+  color: var(--text2); font-weight: 700; font-size: 14px;
+  border: none; background: none; width: 100%; text-align: left;
+}
+.nav-item:hover, .nav-item.active { background: rgba(230,57,70,.12); color: var(--accent); }
+.nav-item .icon { font-size: 15px; width: 18px; text-align: center; }
+
+.admin-main { flex: 1; padding: 32px; overflow-y: auto; }
+.admin-header { margin-bottom: 30px; }
+.admin-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 38px; letter-spacing: 2px; }
+.admin-header p  { color: var(--text2); font-size: 14px; margin-top: 4px; }
+
+/* ── Stat cards ──────────────────────────────── */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px,1fr)); gap: 16px; margin-bottom: 32px; }
+.stat-card  {
+  background: var(--card); border-radius: var(--radius); padding: 20px;
+  border: 1px solid rgba(255,255,255,.06);
+}
+.stat-value { font-family: 'Bebas Neue', sans-serif; font-size: 44px; color: var(--accent); letter-spacing: 1px; line-height: 1; }
+.stat-label { font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: 1px; font-weight: 800; margin-top: 4px; }
+
+/* ── Panel section ───────────────────────────── */
+.panel {
+  background: var(--card); border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,.06); margin-bottom: 24px;
+}
+.panel-head {
+  padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,.06);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.panel-head h3 { font-weight: 800; font-size: 16px; }
+.panel-body    { padding: 24px; }
+
+/* ── Table ───────────────────────────────────── */
+.data-table { width: 100%; border-collapse: collapse; }
+.data-table th {
+  text-align: left; padding: 11px 14px; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: var(--text3); font-weight: 800;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.data-table td { padding: 13px 14px; border-bottom: 1px solid rgba(255,255,255,.04); font-size: 13px; vertical-align: middle; }
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:hover td { background: rgba(255,255,255,.02); }
+.table-thumb {
+  width: 50px; height: 34px; border-radius: 6px; overflow: hidden;
+  background: var(--bg4); display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+.table-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.row-actions { display: flex; gap: 6px; }
+
+/* ── Form ────────────────────────────────────── */
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* ── Lang tabs ───────────────────────────────── */
+.lang-tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.lang-tab {
+  padding: 8px 16px; border-radius: var(--radius-sm);
+  font-size: 13px; font-weight: 800; cursor: pointer;
+  border: 1px solid rgba(255,255,255,.12); color: var(--text2); background: transparent; transition: all .2s;
+}
+.lang-tab.active { background: rgba(230,57,70,.15); border-color: var(--accent); color: var(--accent); }
+
+/* ── Badges ──────────────────────────────────── */
+.badge {
+  display: inline-block; padding: 3px 10px; border-radius: 4px;
+  font-size: 10px; font-weight: 800; letter-spacing: .5px;
+}
+.badge-active  { background: rgba(6,214,160,.15); color: var(--green); }
+.badge-inactive{ background: rgba(230,57,70,.15); color: var(--accent); }
+.badge-new     { background: rgba(230,57,70,.15); color: var(--accent); }
+.badge-emit    { background: rgba(6,214,160,.15); color: var(--green); }
+.badge-fin     { background: rgba(160,160,192,.15); color: var(--text2); }
+
+/* ── SUBSCRIPTION CARDS ──────────────────────── */
+#subs-cards textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+#subs-cards .form-group label {
+  text-transform: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+}

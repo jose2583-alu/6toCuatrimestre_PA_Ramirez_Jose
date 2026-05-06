@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(246, 239, 229);
+}
+h1{
+    color:rgb(101, 101, 226);
+    text-align: center;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+button.add-btn {
+    color: rgb(82, 255, 217);
+    border: rgb(82, 255, 217) 2px solid;
+}
