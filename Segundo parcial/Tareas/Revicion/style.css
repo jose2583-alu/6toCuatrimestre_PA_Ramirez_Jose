@@ -1,0 +1,36 @@
+body{
+    background-color:aliceblue
+}
+h1{
+    text-align:center;
+    color:rgb(19, 24, 128)
+}
+form{
+    width:70%;
+    margin:auto;
+    padding:20px;
+    border:solid 1px black;
+    background-color:white;
+}
+h2{
+    text-align:center;
+    color:rgb(10, 24, 128)
+}
+#filtros{
+    background-color:white;
+    align-items:center;
+    justify-content:center;
+    display:flex;
+    width:70%;
+    margin:auto;
+    border:solid 1px black;
+}
+#tablaVideojuegos{
+    background-color:white;
+    align-items:center;
+    flex-direction: column;
+    display: flex;
+    border:solid 1px black;
+    width:70%;
+    margin:auto;
+}
